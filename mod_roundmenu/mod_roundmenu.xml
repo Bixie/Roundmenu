@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+	<name>Bixie Roundmenu</name>
+	<author>Matthijs Alles</author>
+	<creationDate>Aug 2014</creationDate>
+	<copyright>Copyright (C) 2014 Bixie. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>admin@bixie.nl</authorEmail>
+	<authorUrl>www.bixie.nl</authorUrl>
+	<version>1.0.0</version>
+	<description>Rond menu knopje</description>
+	<files>
+		<filename module="mod_roundmenu">mod_roundmenu.php</filename>
+		<folder>assets</folder>
+		<folder>tmpl</folder>
+		<filename>index.html</filename>
+		<filename>mod_roundmenu.xml</filename>
+	</files>
+	<languages>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="middle" type="menuitem" default="101" label="Menu midden" description=""/>
+				<field name="button1" type="menuitem" default="101" label="Menu blauw" description=""/>
+				<field name="button2" type="menuitem" default="101" label="Menu groen" description=""/>
+				<field name="button3" type="menuitem" default="101" label="Menu geel" description=""/>
+				<field name="none" type="menuitem" multiple="true" default="" size="5" label="Menu's geen kleur" description=""/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
