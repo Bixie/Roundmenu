@@ -9,11 +9,26 @@
 		}
 	}
 
+	
 	win.onresize = function() {
 		round_menu_adjust();
 	}; 
 
 	$(doc).ready(function() {
 		round_menu_adjust();
+		$(".round_menu_wrapper").click(function(e) {
+			$(".round_menu-button").each(function() {
+				// check if clicked point (taken from event) is inside element
+				var mouseX = e.pageX;
+				var mouseY = e.pageY;
+				var offset = $(this).offset();
+				var width = $(this).width();
+				var height = $(this).height();
+				if (mouseX > offset.left && mouseX < offset.left+width 
+					&& mouseY > offset.top && mouseY < offset.top+height) {
+					$(this).click(); // force click event
+				}
+			});
+		});
 	});
 })(document,window,jQuery);

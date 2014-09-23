@@ -11,7 +11,7 @@ defined('_JEXEC') or die;
 
 $document = JFactory::getDocument();
 $document->addStylesheet('/modules/mod_roundmenu/assets/roundmenu.css');
-// $document->addScript('/modules/mod_roundmenu/assets/roundmenu.js');
+$document->addScript('/modules/mod_roundmenu/assets/roundmenu.js');
 
 $app = JFactory::getApplication();
 $activeItemId = $app->input->getInt('Itemid');
